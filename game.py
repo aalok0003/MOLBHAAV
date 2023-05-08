@@ -32,10 +32,10 @@ quantity=st.number_input(f'कितना है ({item_type} में) ?',min
 value=st.number_input('कितने रूपे का है ?',min_value=1)
 
 objective= st.radio(
-    "आप क्या जानते हैं?",
-    ('कितना खरीदना है ','कितने रुपये का खरीदना है ','जानना चाहते हैं कौन सा इंटरनेट पैक सस्ता है ?'))
+    "कोई एक विकल्प चुनें",
+    ('कितना खरीदना है यह पता है ','कितने रुपये का खरीदना है यह पता है ','जानना चाहते हैं कौन सा इंटरनेट पैक सस्ता है ?'))
 
-if objective=='कितने रुपये का खरीदना है ':
+if objective=='कितने रुपये का खरीदना है यह पता है ':
     if item_type=='ग्राम/मिलीलीटर':
 
         price=st.number_input('कितने रुपये का खरीदना है ?')
@@ -49,7 +49,7 @@ if objective=='कितने रुपये का खरीदना है 
         st.write(kitna_milega)
         st.write(item_type)
 
-elif objective=='कितना खरीदना है ':
+elif objective=='कितना खरीदना है यह पता है ':
     if item_type=='ग्राम/मिलीलीटर':
         kitna_lena_hai=st.number_input(f"कितना खरीदना है ({item_type} में)?",min_value=1)
         itne_ka_milega=(value/quantity)*kitna_lena_hai
